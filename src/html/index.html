@@ -8,6 +8,11 @@
   <meta name="author" content="Chris Withers">
   <meta name="description" content="Chris Withers is an actor in New York City.">
   <meta name="keywords" content="Chris Withers,cwithers,heyitscdubs,actor,NYC">
+  <meta property="og:title" content="Chris Withers" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chriswithers.me" />
+  <meta property="og:image" content="https://chriswithers.me/img/opengraph.jpg" />
+  <meta property="og:description" content="Chris Withers is an actor in New York City area.">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -23,18 +28,31 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   ${require('./_nav.html')}
+
+  <div class="static">
   ${require('./_about.html')}
   ${require('./_resume.html')}
   ${require('./_photos.html')}
   ${require('./_headshots.html')}
   ${require('./_videos.html')}
-  ${require('./_contact.html')}
   ${require('./_footer.html')}
-  
+  </div>
+
+  ${require('./_contact.html')}
+
   <script src="js/tobi.min.js"></script>
+  <script src="js/menuspy.min.js"></script>
+  <script src="js/smoothscroll.min.js"></script>
   <script src="js/main.js"></script>
   <script>
     const tobi = new Tobi();
+
+    var elm = document.querySelector('.nav');
+    var ms = new MenuSpy(elm, {enableLocationHash: false});
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200,
+      offset: 100
+    });
   </script>
 </body>
 </html>

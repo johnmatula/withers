@@ -4,7 +4,8 @@ $at-least-breakpoints: (
   'narrow'        : (min-width:  460px),
   'medium'        : (min-width:  680px),
   'wide'          : (min-width:  900px),
-  'extrawide'     : (min-width: 1200px)
+  'extrawide'     : (min-width: 1200px),
+  'tall'          : (min-height: 550px)
 );
 
 @mixin at-least($name) {
@@ -22,7 +23,7 @@ $at-least-breakpoints: (
 // Font utilities
 @function to-rem($size) {
   $rem-size: $size / $base-font-size;
-  @return #{$rem-size}rem;
+  @return $rem-size * 1rem;
 }
 
 @mixin font($font-weight, $font-size, $line-height, $letter-spacing: null, $font-family: null) {

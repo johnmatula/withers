@@ -4,7 +4,7 @@
   "description": "A theme for a personal website.",
   "main": "index.js",
   "scripts": {
-    "start": "run-p build:vendorjs watch:scss watch:js watch:html watch:img browsersync",
+    "start": "run-p build:vendorjs build:favicon watch:scss watch:js watch:html watch:img browsersync",
     "watch:scss": "watch 'npm run build:css' src/scss",
     "watch:html": "watch 'npm run build:html' src/html",
     "watch:js": "watch 'npm run build:js' src/js",
@@ -14,6 +14,7 @@
     "build:html": "html-includes --src 'src/html' --dest 'dist'",
     "build:js": "mkdir -p dist/js && minify src/js/main.js --out-file dist/js/main.min.js",
     "build:img": "mkdir -p dist/img && rsync src/img/* dist/img",
+    "build:favicon": "mkdir -p dist && rsync src/favicon/* dist",
     "browsersync": "browser-sync start --server 'dist' --files 'dist'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

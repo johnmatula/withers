@@ -1,7 +1,7 @@
 {
   "name": "withers",
   "version": "1.0.0",
-  "description": "A theme for a personal website.",
+  "description": "A personal website.",
   "main": "index.js",
   "scripts": {
     "start": "run-p build:vendorjs build:favicon watch:scss watch:js watch:html watch:img browsersync",

@@ -1,13 +1,6 @@
-$base-font-size: 16px;
-
-@import 'global/_normalize';
-@import 'global/_mixins';
-@import 'global/_vars';
-@import 'global/_fonts';
-@import 'vendor/_tobi';
-@import 'global/_shell';
-@import 'components/_nav';
-@import 'components/_about';
-@import 'components/_gallery';
-@import 'components/_sections';
-@import 'components/_contact';
+@use 'global/all' as *;
+@use 'components/_nav';
+@use 'components/_about';
+@use 'components/_gallery';
+@use 'components/_sections';
+@use 'components/_contact';

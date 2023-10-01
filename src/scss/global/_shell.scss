@@ -1,3 +1,8 @@
+@use 'global/_normalize' as *;
+@use 'global/_mixins' as *;
+@use 'global/_vars' as *;
+@use 'global/_fonts' as *;
+
 * {
   font-family: $font-barlow;
 }
